@@ -41,8 +41,8 @@ public class Ex08_multi_array {
 		
 		int sum =0;
 		
-		for(int i =0; i<4; i++) {
-			for(int j =0; j<5 ; j++) {
+		for(int i =0; i<iArr.length; i++) {
+			for(int j =0; j<iArr[i].length ; j++) {
 				sum += iArr[i][j];
 			}
 		}
