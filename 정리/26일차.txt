@@ -1,0 +1,173 @@
+color -글자 색 바꿈
+ㄴ colorname, rgb(255,255,255), rgba(255,255,255,1),Hex
+font - 폰트와 관련된 스타일 
+ㄴ font-size : 크기
+ㄴ font-weight : 두께
+ㄴ font-family : 폰트 지정(궁서,돋움,Lato)
+ㄴ text-decoration : 밑줄, 윗줄, 취소선
+ㄴ font-variant : 소문자를 작은크기의 대문자로 변경
+ㄴ text-align : 텍스트의 정렬
+
+요소의 크기를 지정할 때 사용하는 단위
+1. %
+요소를 포함한 부모의 크기 대비 지정
+
+2. vw,vh
+브라우저 창의 해상도를 기준으로 삼는 단위
+
+3. auto
+브라우저가 자동으로 계산하게 만드는 값
+margin과 padding을 사용할 때 같이 사용한다.
+단독으로 사용하는 경우는 거의 없다.
+
+크기지정
+width : 너비
+height : 높이
+
+이미지 크기를 지정할 때 width나 height 하나만 설정을 해도 비율의 맞게 크기가 축소된다.
+
+여백 지정하기
+외부여백
+ㄴmargin : 요소의 외부여백
+ㄴmargin-top,right,bottom,left
+ㄴmargin : 상,우,하,좌
+내부여백
+ㄴpadding : 요소의 내부여백
+ㄴpadding-top,right,bottom,left
+ㄴpadding : 상,우,하,좌
+
+테두리
+border
+ㄴ dotted : 점선
+ㄴ dashed : 좀 더 긴 점선
+ㄴ solid : 실선
+ㄴ double : 이중실선
+ㄴ inset : 두께감있는 실선
+ㄴ outset : 두께감있는 실선
+
+선의 두께
+border-width
+
+선 색상
+border-color
+
+단축표현
+border : 두께, 스타일, 색상
+
+border-top : 두께, 스타일, 색상
+border-right : 두께, 스타일, 색상
+
+테두리 곡률
+border-radius
+
+배경을 표시하는 스타일
+background-color : colorname, rgb,rgba,Hex
+
+배경에 이미지 넣기
+backgrund-image
+p{
+   background-image : url(경로);
+}
+
+background-position-x : 이미지가 나타날 x축의 위치
+background-position-y : 이미지가 나타날 y축의 위치
+
+화면에 표시하는 방식
+visibility : visible, hidden -> 보이냐 안보이냐
+
+display : block, inline, none -> 어떻게 보여줄거냐
+
+block속성의 태그를 inline으로 만들 수 있고
+inline속성의 태그를 block으로 만들 수 있다.
+
+요소를 쉽게 정렬할 수 있게 해주는 display속성 grid
+부모요소의 display를 grid로 지정한다.
+
+<div>
+   <div>1</div>
+   <div>2</div>
+   <div>3</div>
+</div>
+
+grid-template-columns : 요소를 세로로 쪼갬
+grid-template-columns : 1fr 1fr 1fr -> 1 : 1 : 1
+1 2 3
+
+
+grid-template-rows : 요소를 가로로 쪼갬
+1
+2
+3
+
+columns와 rows를 동시에 줘 표형태로 쪼갤수도 있다.
+<div>
+   <div>1</div>
+   <div>2</div>
+   <div>3</div>
+   <div>4</div>
+</div>
+
+1 2
+3 4
+
+사진 동그랗게 만들기
+정사각형이 아닌 사진은 타원형으로 나온다.
+
+1.부모태그를 만든다.
+2.부모태그의 크기를 지정(정사각형)
+3.자식태그를 부모태그 크기의 100%를 차지
+ㄴ object-fit : cover
+fill : 미디어를 부모 요소에 꽉 들어맞게 채운다. 찌그러질 수 있다.
+contain : 미디어의 비율을 유지한 채, 부모 요소의 밖으로 튀어나가지 않도록 크기를 축소한다.
+cover : 미디어 일부가 부모 요소 밖으로 빠져나가더라도 비율을 유지한 채로, 
+부모 요소에 꽉 들어맞게 채운다.
+----------------------------------------------------------------------------------------------------
+하이라이트 영역 그리드로 만들기
+하이라이트 요소를 감싸고 있는 div에 highlight_area라고 id 부여하기
+
+버튼 꾸미기
+1. 높이
+2. 너비
+3. 폰트 사이즈
+4. 버튼 배경색
+5. 테두리
+6. 테두리 곡률  
+
+외부 CSS를 불러와 아이콘 활용하기
+FontAwesome사이트는 개발자들이 활용할수 있는 온갖 아이콘을 제공해주는 서비스이다.
+
+반응형 웹페이지
+
+
+미디어쿼리
+CSS에서 상황이나 조건이 변할 때 다른 코드를 적용할 수 있도록 도와주는 도구
+
+@media(조건){
+     스타일
+}
+
+미디어쿼리와 vw,vh를 적극적으로 섞어서 사용하면 반응형 웹페이지를 만드는데 어려움이 없다.
+
+
+
+자바스크립트는 복잡한 계산을 수행하고, HTML태그와 CSS스타일을 수정할 수 있는 도구
+HTML태그와 CSS스타일을 수정할 수 있다는 건 중요한 특징 중 하나이다.
+
+자바스크립트 코드를 실행하는 법
+크롬 브라우저의 개발자모드의 콘솔은 자바스크립트의 실행을 위한 인터프리터가 내장되어 있으므로,
+콘솔에서 바로 자바스크립트 코드를 연습할 수 있다.
+
+데이터타입(자료형)
+typeof(데이터)
+데이터의 자료형을 확인할 수 있다.
+
+Number 		숫자형태 		정수,실수
+String 		문자열		문자,문자열
+Boolean		참과 거짓의 표현	
+undefined 	변수에 값이 할당되지 않았음을 알려준다.
+
+String 
+문자를 표현하기 위한 자료형
+큰따옴표 작은따옴표 둘 다 사용이 가능하다.
+"Hello",'Hello'
+
