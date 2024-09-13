@@ -34,6 +34,13 @@ function App() {
     setItems([...newItems]);
   }
 
+  //내용수정
+  const editItem = () =>{
+    setItems([...items]);
+  }
+
+  
+
   //App.js에서 Todo에 deleteItem 연결하기
 
   //map() -> 반복문 안에 들어있는 내용을 하나씩 꺼내서 처리한다.
@@ -44,7 +51,7 @@ function App() {
   let todoItems = items.length > 0 && (
       <Paper style ={{margin : 16}}>
         <List>
-          {items.map((item) => (<Todo item={item} key={item.id} deleteItem={deleteItem}/>))}
+          {items.map((item) => (<Todo item={item} key={item.id}  editItem={editItem} deleteItem={deleteItem}/>))}
         </List>
       </Paper>
   );
