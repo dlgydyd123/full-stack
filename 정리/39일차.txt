@@ -1,0 +1,100 @@
+1.start.spring.io ->프로젝트생성
+2.eclipse에 import
+3.스프링의 핵심 개념 IoC, DI
+객체를 우리가 만드는 것이 아님(부트가 알아서 만들어줌) -> IoC
+
+스프링에게 객체를 만들어달라고 시키는 법
+클래스 앞에 컴포넌트 어노테이션을 붙힘
+@Component
+public class Car{};
+
+@ComponentScan을 통해서 @Component가 붙어있는 클래스를 전부
+객체로 만들어서 컨테이너 저장한다.
+
+의존성 주입
+객체가 필요한 곳에 직접 넣는게 아니라
+컨테이너에 저장해 놓은 객체를 주입을 시키는 것
+
+1.필드 주입 (숙달되면 이거 써도 괜찮긴함)
+주입이 필요한 곳에 @Autowired -> 편한데 순환참조가 일어날 수 있다.
+
+2.생성자주입(가장 많이 씀)
+생성자를 만들고 주입이 필요한 필드를 매개변수로 받아서 주입
+
+3. setter주입 ->  거의 안쓴다.
+setter를 통해서 객체를 주입
+
+@Component
+public class Battery{ -> 객체 컨테이너에 battery객체가 저장됨
+   int Charge = 90;
+}
+
+@Component
+@RequiredArgsConstructor
+public class Toy{ -> 객체 컨테이너에 toy객체가 저장됨
+  
+   Bettery bettery; -> 배터리 객체가 필요함	
+
+   
+}
+
+
+toy.bettery -> 90;
+
+Gradle
+자동화 빌드툴
+플러그인
+라이브러리 설치 -> 어떤 버전의 어떤라이브러리를 설치하겠다.
+Gradle이 저장소로가서 설치를 해준다.
+프로젝트의 버전관리
+
+Lombok
+어노테이션으로 코딩에 필요한 코드를 대신 만들어준다.
+@Getter -> getter메서드 만들어줌
+@Setter -> setter메서드 만들어줌
+@Builder -> 빌더패턴 사용할 수 있게 해줌
+@Data -> getter/setter,toString,EqualandHashCode메서드를 사용가능 
+@NoArgsConstructor ->기본생성자
+@AllArgsConstructor -> 모든 필드를 매개변수로 갖는 생성자
+@RequiredArgsConstructor ->  @NonNull,final만 매개변수로 갖는 생성자 
+@ToString ->
+
+public calss User{
+   String name;
+   int age;
+}
+
+User user = new User.builder().name("홍길동").age(30).build();
+장점
+생성자 오버로딩을 줄일 수 있다.
+객체를 단계적을 생성할 수 있다.
+유연한 객체생성이 가능
+
+주소로 요청 -> json데이터 받음
+
+컨트롤러 -> 서비스 -> 영속 -> DB -> 영속 -> 서비스 -> 컨트롤러 -> 우리한테 옴
+
+레이어드 아키텍처				MVC패턴
+
+소프트웨어 전반에 계층을 나눔		표현계층에서 주로 사용
+표현,서비스,영속계층			Model,View,Controller
+기능별로 책임의 분리			UI처리와 데이터의 흐름만 분리
+계층별 의존성 최소화
+계층간 상호작용을 통해 데이터 흐름		Controller가 입력을 받아 Model과 View간의 흐름을 제어
+
+
+싱글톤 패턴
+스프링이 Bean을 만들어서 저장
+스프링에서 Bean으로 만들어지는 것들은 다 싱글톤으로 만들어진다.
+사용자는 만들어진 Bean을 사용한다.
+객체를 계속 만드는게 아닌 한번 만들어진 객체를 계속사용하는 것
+메모리에 딱 1번만 올라가게 되고 우리는 만들어진 것을 사용한다.
+
+
+서비스 개발 실습
+POST로 요청했을 때 CREATE REST API 개발
+GET으로 요청했을 때 RETRIEVE(검색) REST API 개발
+UPDATE로 요청했을 때 UPDATE REST API 개발
+DELETE로 요청했을 때 DELETE REST API 개발
+
+영속계층 ->서비스 계층 ->표현계층 순으로 구현
