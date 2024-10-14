@@ -1,0 +1,22 @@
+UserEntity
+
+idx
+id
+pwd
+name(진짜 이름)
+email
+
+ResponseDTO
+속성 error
+List<T>data
+
+
+
+
+
+{
+    "userId":"one",
+    "pwd":"1234",
+    "name": "lee",
+    "email": "lee@korea.com"
+}
