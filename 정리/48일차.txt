@@ -1,0 +1,33 @@
+404 Not Found
+요청경로가 잘못됨
+
+ex)call("요청경로") -> 요청경로가 없거나 오타가 났거나
+
+@RestController
+@RequestMapping("리소스") -> 리소스가 없거나 오타가 났거나
+XXController{
+	@GetMapping("리소스") -> 리소스가 없거나 오타가 났거나
+}
+
+
+UserService
+
+UserController
+리소스: name
+- HTTP메서드 : GET
+- 메서드명 : getUserName
+
+로그아웃하기
+App.js에 로그아웃 버튼 만들고 로그아웃 시키기
+
+
+수정하기 
+수정한 내용을 DB에 반영시키기
+
+UserService
+- userModify()
+
+UserController
+- 리소스 : modify
+- HTTP메서드 : PUT
+- 메서드명 : modify()
