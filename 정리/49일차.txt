@@ -1,0 +1,12 @@
+프로젝트
+
+기획(주제선정)
+플로우차트 설계
+ui구성(피그마로 설계)
+기능별 흐름 설계
+DB설계(erd설계 erdcloud) -> Entity클래스 설계를 잘 하면 된다.
+
+엔드포인트
+awseb-e-arpid9peyc-stack-awsebrdsdatabase-jpagbpqrhlyo.crae84sgapk3.eu-north-1.rds.amazonaws.com
+
+gradlew가 프로젝트를 빌드 해준다.
