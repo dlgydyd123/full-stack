@@ -17,10 +17,3 @@ http://localhost:5000/oauth2/authorization/github
 소셜로그인에서 토큰이 발행되는 부분 소셜로그인을 이용한 인증이 
 완료된 다음, 즉 OAuth2.0을 이용란 인증이 모두 끝난다음 발행
 
-
-Client ID
-Ov23li4HDDsczocBEr8y
-
-
-Client secrets 
-da5bcd7aa861a56d1198c77f822dc91cec73addd
