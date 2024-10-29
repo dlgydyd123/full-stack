@@ -1,0 +1,32 @@
+1.node.js(LTS)
+LTS(Long Term Service)
+오랜기간 지원하는 버전
+
+2.python3
+
+3.JDK와 안드로이드 스튜디오
+
+SDK(안드로이드 플랫폼, 에뮬레이터,빌드도구,디버깅도구 기타 라이브러리와 API)
+
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+ㄴ 'y' 누르기
+다른 곳에서도 파워쉘을 이용해 프로젝트를 만들수 있도록 해주는 명령어
+
+
+이벤트 
+사용자의 행동에 따라 상호작용하는 모든 것
+많은 종류의 이벤트가 존재하고, 컴포넌트의 역할에 따라 제공되는 
+이벤트도 약간씩 차이가 있다.
+
+press
+onClick과 가장 비슷한 이벤트
+
+
+클릭했을 때 
+onPressIn > onPress > onPressOut  또는
+onPressIn > onLongPress > onpressOut
+
+change이벤트
+변화를 감지하는 이벤트
+값을 입력하는 TextInput 컴포넌트에서 많이 사용된다.
